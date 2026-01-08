@@ -1,66 +1,45 @@
 import { motion } from "framer-motion";
-import { Phone, MapPin, Truck, CheckCircle } from "lucide-react";
+import { CheckCircle, Phone, Truck, Trash2 } from "lucide-react";
 
 /**
  * Process Section Component
  * 
  * Design Philosophy: Sustentabilidade Dinâmica
- * - Shows the recycling process step-by-step
- * - Animated flow with connecting lines
- * - Icons animate on scroll
- * - Clean, asymmetric layout
+ * - 4 clear steps for renting a dumpster
+ * - Dark background with white text
+ * - Animated cards and connecting lines
  */
 
 const steps = [
   {
-    icon: Phone,
-    title: "Solicite",
-    description: "Entre em contato conosco via WhatsApp ou telefone",
-    color: "bg-green-500",
-  },
-  {
-    icon: MapPin,
-    title: "Localize",
-    description: "Informamos a data e horário da coleta",
-    color: "bg-blue-500",
-  },
-  {
-    icon: Truck,
-    title: "Coletamos",
-    description: "Nosso caminhão especializado faz a coleta",
-    color: "bg-orange-500",
-  },
-  {
+    number: 1,
     icon: CheckCircle,
-    title: "Reciclamos",
-    description: "Resíduos são processados de forma sustentável",
-    color: "bg-green-600",
+    title: "Escolha a Caçamba Certa",
+    description: "Selecione o tamanho ideal para sua necessidade (Lixo ou Entulho)",
+  },
+  {
+    number: 2,
+    icon: Phone,
+    title: "Entre em Contato",
+    description: "Fale conosco por telefone, WhatsApp ou preencha o formulário online",
+  },
+  {
+    number: 3,
+    icon: Truck,
+    title: "Receba e Utilize",
+    description: "Caçamba entregue no local e data combinados",
+  },
+  {
+    number: 4,
+    icon: Trash2,
+    title: "Remoção e Descarte",
+    description: "Avise-nos para retirar e descartarmos os resíduos de forma adequada",
   },
 ];
 
 export default function ProcessSection() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const stepVariants = {
-    hidden: { opacity: 0, x: -30 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.6 },
-    },
-  };
-
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-20 px-4 bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
         <motion.div
@@ -70,67 +49,48 @@ export default function ProcessSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Como Funciona
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            COMO ALUGAR UMA CAÇAMBA
           </h2>
-          <p className="text-xl text-gray-600">
-            Processo simples e eficiente em 4 passos
+          <p className="text-xl text-gray-300">
+            Alugar uma caçamba com a Mundo Caçambas é fácil e rápido. Siga essas 4 etapas simples:
           </p>
         </motion.div>
 
-        {/* Process Steps */}
-        <motion.div
-          className="space-y-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
+        {/* Steps Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
               <motion.div
                 key={index}
-                variants={stepVariants}
-                className="flex gap-6 items-start"
+                className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
               >
-                {/* Left: Icon */}
+                {/* Step Number */}
                 <motion.div
-                  className={`flex-shrink-0 w-20 h-20 rounded-full ${step.color} flex items-center justify-center shadow-lg`}
+                  className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mb-4 font-bold text-lg"
                   whileHover={{ scale: 1.1, rotate: 10 }}
-                  transition={{ duration: 0.3 }}
                 >
-                  <Icon className="w-10 h-10 text-white" />
+                  {step.number}
                 </motion.div>
 
-                {/* Right: Content */}
-                <div className="flex-grow pt-2">
-                  <div className="flex items-center gap-3 mb-2">
-                    <h3 className="text-2xl font-bold text-gray-900">
-                      {step.title}
-                    </h3>
-                    <span className="text-sm font-semibold text-gray-400">
-                      Passo {index + 1}
-                    </span>
-                  </div>
-                  <p className="text-gray-600">{step.description}</p>
-                </div>
+                {/* Icon */}
+                <Icon className="w-10 h-10 text-green-500 mb-4" />
 
-                {/* Connecting Line */}
-                {index < steps.length - 1 && (
-                  <motion.div
-                    className="absolute left-[3.75rem] w-1 bg-gradient-to-b from-green-500 to-blue-500 opacity-30"
-                    style={{ height: "120px", marginTop: "80px" }}
-                    initial={{ scaleY: 0 }}
-                    whileInView={{ scaleY: 1 }}
-                    transition={{ duration: 0.8, delay: index * 0.2 }}
-                    viewport={{ once: true }}
-                  />
-                )}
+                {/* Title */}
+                <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+
+                {/* Description */}
+                <p className="text-gray-300">{step.description}</p>
               </motion.div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

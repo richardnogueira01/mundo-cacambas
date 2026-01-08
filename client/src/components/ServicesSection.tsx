@@ -1,66 +1,57 @@
 import { motion } from "framer-motion";
-import { Truck, Leaf, Zap, Shield } from "lucide-react";
+import { Trash2, Hammer, Truck } from "lucide-react";
 
 /**
  * Services Section Component
  * 
  * Design Philosophy: Sustentabilidade Dinâmica
- * - Grid layout with animated cards
- * - Each card has hover elevation effect
- * - Icons animate on hover
- * - Staggered entrance animation
+ * - Focus on two main services: Lixo and Entulho
+ * - Large cards with icons and descriptions
+ * - Animated on scroll
  */
 
 const services = [
   {
-    icon: Truck,
-    title: "Coleta Especializada",
-    description: "Caminhão equipado para coleta segura e eficiente de resíduos",
+    icon: Trash2,
+    title: "Lixo",
+    description: "Coleta e transporte de resíduos gerais, domésticos e comerciais. Ideal para limpezas, reformas e descartes diversos.",
+    features: [
+      "Caçambas de diversos tamanhos",
+      "Coleta rápida e segura",
+      "Descarte responsável",
+      "Atendimento 24 horas",
+    ],
     color: "from-green-500 to-green-600",
   },
   {
-    icon: Leaf,
-    title: "Sustentabilidade",
-    description: "Comprometidos com práticas ambientais responsáveis",
+    icon: Hammer,
+    title: "Entulho",
+    description: "Remoção profissional de entulho de obras, reformas e demolições. Garantimos limpeza completa do local.",
+    features: [
+      "Caçambas especializadas",
+      "Remoção de grandes volumes",
+      "Limpeza do local",
+      "Reciclagem de materiais",
+    ],
     color: "from-blue-500 to-blue-600",
   },
   {
-    icon: Zap,
-    title: "Agilidade",
-    description: "Atendimento rápido e profissional em toda a região",
+    icon: Truck,
+    title: "Transporte de Resíduos",
+    description: "Transporte seguro e legal de resíduos para locais de descarte autorizados e licenciados.",
+    features: [
+      "Transporte seguro",
+      "Documentação completa",
+      "Descarte legal",
+      "Rastreamento",
+    ],
     color: "from-orange-500 to-orange-600",
-  },
-  {
-    icon: Shield,
-    title: "Segurança",
-    description: "Equipe treinada e equipamentos de proteção certificados",
-    color: "from-green-600 to-green-700",
   },
 ];
 
 export default function ServicesSection() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
-
   return (
-    <section className="py-20 px-4 bg-gray-50">
+    <section id="services" className="py-20 px-4 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
         <motion.div
@@ -71,50 +62,54 @@ export default function ServicesSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Nossos Serviços
+            NOSSOS SERVIÇOS
           </h2>
           <p className="text-xl text-gray-600">
-            Soluções completas em reciclagem e coleta de resíduos
+            Confira as categorias de serviços que oferecemos
           </p>
         </motion.div>
 
         {/* Services Grid */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <motion.div
                 key={index}
-                variants={cardVariants}
+                className={`bg-gradient-to-br ${service.color} text-white rounded-lg p-8 shadow-lg`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 whileHover={{ y: -10 }}
-                className="bg-white rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow"
               >
-                {/* Icon Container */}
+                {/* Icon */}
                 <motion.div
-                  className={`w-16 h-16 rounded-lg bg-gradient-to-br ${service.color} flex items-center justify-center mb-6`}
+                  className="mb-6"
                   whileHover={{ rotate: 10, scale: 1.1 }}
-                  transition={{ duration: 0.3 }}
                 >
-                  <Icon className="w-8 h-8 text-white" />
+                  <Icon className="w-16 h-16" />
                 </motion.div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {service.title}
-                </h3>
+                <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
 
                 {/* Description */}
-                <p className="text-gray-600">{service.description}</p>
+                <p className="text-white/90 mb-6">{service.description}</p>
+
+                {/* Features */}
+                <ul className="space-y-2">
+                  {service.features.map((feature, i) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-white rounded-full" />
+                      <span className="text-white/80 text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -34,8 +34,12 @@ export default function HeroSection() {
     },
   };
 
+  const whatsappNumber = "5511997412118";
+  const whatsappMessage = "Olá! Gostaria de solicitar uma caçamba para lixo ou entulho.";
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
   return (
-    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative w-full h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image */}
       <motion.div
         className="absolute inset-0 z-0"
@@ -49,12 +53,12 @@ export default function HeroSection() {
           className="w-full h-full object-cover"
         />
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/40" />
       </motion.div>
 
       {/* Content */}
       <motion.div
-        className="relative z-10 text-center max-w-2xl px-4"
+        className="relative z-10 text-center max-w-3xl px-4"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -64,33 +68,41 @@ export default function HeroSection() {
           variants={itemVariants}
           className="font-display text-5xl md:text-7xl font-bold text-white mb-4 leading-tight"
         >
-          Mundo Caçambas
+          Sua solução para remoção de resíduos
         </motion.h1>
 
         {/* Subtitle */}
         <motion.p
           variants={itemVariants}
-          className="text-xl md:text-2xl text-white/90 mb-8 font-light"
+          className="text-2xl md:text-3xl text-white/95 mb-8 font-semibold"
         >
-          Transformando resíduos em oportunidades
+          Rápido, seguro e sustentável!
         </motion.p>
 
         {/* Description */}
         <motion.p
           variants={itemVariants}
-          className="text-lg text-white/80 mb-12 max-w-xl mx-auto"
+          className="text-lg text-white/85 mb-12 max-w-2xl mx-auto leading-relaxed"
         >
-          Serviço profissional de reciclagem e coleta de resíduos com caminhão especializado
+          Há 20 anos, a Mundo Caçambas facilita o transporte e descarte de resíduos para obras, reformas e limpezas gerais, garantindo qualidade e agilidade para pessoas físicas e jurídicas.
         </motion.p>
 
         {/* CTA Button */}
         <motion.div variants={itemVariants}>
-          <Button
-            size="lg"
-            className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-lg font-semibold rounded-lg shadow-lg"
+          <motion.a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            Solicitar Coleta
-          </Button>
+            <Button
+              size="lg"
+              className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-lg font-semibold rounded-lg shadow-lg border-2 border-green-400"
+            >
+              ALUGAR UMA CAÇAMBA AGORA
+            </Button>
+          </motion.a>
         </motion.div>
       </motion.div>
 

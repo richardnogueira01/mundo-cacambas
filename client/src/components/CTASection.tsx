@@ -14,11 +14,11 @@ import { MessageCircle, Phone } from "lucide-react";
 
 export default function CTASection() {
   const whatsappNumber = "5511997412118";
-  const whatsappMessage = "Olá! Gostaria de saber mais sobre os serviços de reciclagem do Mundo Caçambas.";
+  const whatsappMessage = "Olá! Gostaria de solicitar uma caçamba para lixo ou entulho.";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
-    <section className="relative py-24 px-4 overflow-hidden">
+    <section id="contact" className="relative py-24 px-4 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -45,7 +45,7 @@ export default function CTASection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Pronto para Reciclar?
+          SOLICITE UM ORÇAMENTO AGORA
         </motion.h2>
 
         {/* Description */}
@@ -56,7 +56,7 @@ export default function CTASection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Entre em contato conosco agora mesmo e solicite sua coleta. Estamos prontos para ajudar!
+          Precisa de uma caçamba para seu projeto? Solicite um orçamento gratuito agora mesmo! Nossa equipe está à disposição para oferecer as melhores condições e tirar todas as suas dúvidas.
         </motion.p>
 
         {/* Buttons */}

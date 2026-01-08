@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageCircle, Phone, MapPin } from "lucide-react";
+import { MessageCircle, Phone, MapPin, Facebook, Instagram } from "lucide-react";
 
 /**
  * Footer Component
@@ -12,7 +12,7 @@ import { MessageCircle, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   const whatsappNumber = "5511997412118";
-  const whatsappMessage = "Olá! Gostaria de saber mais sobre os serviços de reciclagem do Mundo Caçambas.";
+  const whatsappMessage = "Olá! Gostaria de solicitar uma caçamba para lixo ou entulho.";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   const currentYear = new Date().getFullYear();
@@ -33,7 +33,7 @@ export default function Footer() {
               Mundo Caçambas
             </h3>
             <p className="text-gray-400">
-              Serviço profissional de reciclagem e coleta de resíduos com caminhão especializado.
+              Serviço profissional de locação de caçambas para lixo e entulho com 20 anos de experiência.
             </p>
           </motion.div>
 
@@ -47,22 +47,27 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Links Rápidos</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#" className="hover:text-green-500 transition">
+                <a href="#home" className="hover:text-green-500 transition">
                   Início
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-green-500 transition">
-                  Serviços
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-green-500 transition">
+                <a href="#about" className="hover:text-green-500 transition">
                   Sobre
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-green-500 transition">
+                <a href="#services" className="hover:text-green-500 transition">
+                  Serviços
+                </a>
+              </li>
+              <li>
+                <a href="#differentials" className="hover:text-green-500 transition">
+                  Diferenciais
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="hover:text-green-500 transition">
                   Contato
                 </a>
               </li>
