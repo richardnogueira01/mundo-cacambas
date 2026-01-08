@@ -14,36 +14,36 @@ const services = [
   {
     icon: Trash2,
     title: "Lixo",
-    description: "Coleta e transporte de resíduos gerais, domésticos e comerciais. Ideal para limpezas, reformas e descartes diversos.",
+    description: "Solução completa para resíduos do dia a dia. Coletamos lixo doméstico, comercial e de limpezas gerais com rapidez e profissionalismo.",
     features: [
-      "Caçambas de diversos tamanhos",
-      "Coleta rápida e segura",
-      "Descarte responsável",
-      "Atendimento 24 horas",
+      "Múltiplos tamanhos de caçambas",
+      "Coleta no horário agendado",
+      "Descarte em locais autorizados",
+      "Disponibilidade 24/7",
     ],
     color: "from-green-500 to-green-600",
   },
   {
     icon: Hammer,
     title: "Entulho",
-    description: "Remoção profissional de entulho de obras, reformas e demolições. Garantimos limpeza completa do local.",
+    description: "Especialistas em limpeza de obras e reformas. Removemos todo o entulho com eficiência, deixando o local limpo e pronto para uso.",
     features: [
-      "Caçambas especializadas",
-      "Remoção de grandes volumes",
-      "Limpeza do local",
-      "Reciclagem de materiais",
+      "Caçambas robustas para grandes volumes",
+      "Remoção completa do local",
+      "Separação e reciclagem de materiais",
+      "Limpeza final do espaço",
     ],
     color: "from-blue-500 to-blue-600",
   },
   {
     icon: Truck,
     title: "Transporte de Resíduos",
-    description: "Transporte seguro e legal de resíduos para locais de descarte autorizados e licenciados.",
+    description: "Transporte confiável com rastreamento total. Garantimos que todos os resíduos chegam aos centros de reciclagem e descarte autorizados.",
     features: [
-      "Transporte seguro",
-      "Documentação completa",
-      "Descarte legal",
-      "Rastreamento",
+      "Frota moderna e bem mantida",
+      "Documentação e rastreamento",
+      "Cumprimento de normas legais",
+      "Transporte seguro e rápido",
     ],
     color: "from-orange-500 to-orange-600",
   },
@@ -62,10 +62,10 @@ export default function ServicesSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            NOSSOS SERVIÇOS
+            SERVIÇOS ESPECIALIZADOS
           </h2>
           <p className="text-xl text-gray-600">
-            Confira as categorias de serviços que oferecemos
+            Soluções completas para todos os tipos de resíduos
           </p>
         </motion.div>
 

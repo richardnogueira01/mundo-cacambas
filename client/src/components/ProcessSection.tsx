@@ -14,26 +14,26 @@ const steps = [
   {
     number: 1,
     icon: CheckCircle,
-    title: "Escolha a Caçamba Certa",
-    description: "Selecione o tamanho ideal para sua necessidade (Lixo ou Entulho)",
+    title: "Escolha o Serviço",
+    description: "Defina se precisa de coleta de lixo, entulho ou ambos, e o tamanho da caçamba",
   },
   {
     number: 2,
     icon: Phone,
-    title: "Entre em Contato",
-    description: "Fale conosco por telefone, WhatsApp ou preencha o formulário online",
+    title: "Solicite um Orçamento",
+    description: "Entre em contato via WhatsApp, telefone ou formulário. Responderemos rapidamente",
   },
   {
     number: 3,
     icon: Truck,
-    title: "Receba e Utilize",
-    description: "Caçamba entregue no local e data combinados",
+    title: "Receba a Caçamba",
+    description: "Entregamos no local combinado na data e horário que melhor lhe convir",
   },
   {
     number: 4,
     icon: Trash2,
-    title: "Remoção e Descarte",
-    description: "Avise-nos para retirar e descartarmos os resíduos de forma adequada",
+    title: "Coleta e Descarte",
+    description: "Quando terminar, nos avise e retiraremos a caçamba com todo o resíduo",
   },
 ];
 
@@ -50,10 +50,10 @@ export default function ProcessSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            COMO ALUGAR UMA CAÇAMBA
+            COMO FUNCIONA
           </h2>
           <p className="text-xl text-gray-300">
-            Alugar uma caçamba com a Mundo Caçambas é fácil e rápido. Siga essas 4 etapas simples:
+            Processo simples e rápido em apenas 4 passos
           </p>
         </motion.div>
 

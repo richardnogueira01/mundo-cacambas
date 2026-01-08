@@ -45,7 +45,7 @@ export default function CTASection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          SOLICITE UM ORÇAMENTO AGORA
+          PRONTO PARA RESOLVER SEU PROBLEMA?
         </motion.h2>
 
         {/* Description */}
@@ -56,7 +56,7 @@ export default function CTASection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Precisa de uma caçamba para seu projeto? Solicite um orçamento gratuito agora mesmo! Nossa equipe está à disposição para oferecer as melhores condições e tirar todas as suas dúvidas.
+          Não deixe resíduos se acumularem. Fale conosco agora e receba um orçamento rápido e sem compromisso. Estamos prontos para ajudar!
         </motion.p>
 
         {/* Buttons */}

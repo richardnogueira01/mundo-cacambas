@@ -13,33 +13,32 @@ import { Award, Clock, Zap, Users, DollarSign, Truck } from "lucide-react";
 const differentials = [
   {
     icon: Award,
-    title: "Experiência de 20 Anos",
-    description: "Duas décadas de expertise no setor, garantindo serviços de alta qualidade.",
+    title: "Experiência Comprovada",
+    description: "20 anos de história de sucesso, confiabilidade e satisfação de clientes em toda a região.",
   },
   {
     icon: Users,
-    title: "Atendimento Personalizado",
-    description: "Soluções sob medida para atender às necessidades específicas de cada cliente.",
+    title: "Soluções Customizadas",
+    description: "Cada projeto é único. Adaptamos nossos serviços para atender perfeitamente suas necessidades.",
   },
   {
     icon: Clock,
-    title: "Entrega e Retirada Rápida",
-    description: "Logística eficiente, com prazos de entrega e retirada pontuais.",
+    title: "Agilidade na Entrega",
+    description: "Agendamos e entregamos nos prazos combinados. Sua obra não espera.",
   },
   {
-    icon: DollarSign,
-    title: "Preços Competitivos",
-    description: "Valores acessíveis e transparência nos custos, com excelente relação custo-benefício.",
+    icon: DollarSign,    title: "Melhor Custo-Benefífcio",
+    description: "Preços justos e transparentes. Sem surpresas, sem taxas ocultas.",
   },
   {
     icon: Truck,
-    title: "Atendimento 24 Horas",
-    description: "Disponibilidade total para emergências e necessidades urgentes.",
+    title: "Disponibilidade Total",
+    description: "Atendemos 24 horas por dia, 7 dias por semana. Sempre pronto para ajudar.",
   },
   {
     icon: Zap,
-    title: "Pessoas Físicas e Jurídicas",
-    description: "Flexibilidade para atender tanto clientes residenciais quanto empresariais.",
+    title: "Para Todos os Tipos",
+    description: "Atendemos residências, empresas, construtoras e qualquer outro tipo de cliente.",
   },
 ];
 
@@ -56,10 +55,10 @@ export default function DifferentialsSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            POR QUE ESCOLHER MUNDO CAÇAMBAS?
+            NOSSOS DIFERENCIAIS
           </h2>
           <p className="text-xl text-gray-600">
-            Descubra as vantagens que fazem de nós a melhor escolha para locação de caçambas
+            Veja o que nos torna a melhor opção para seus serviços de coleta de resíduos
           </p>
         </motion.div>
 

@@ -13,20 +13,20 @@ import { Smile, Leaf, Shield } from "lucide-react";
 const benefits = [
   {
     icon: Smile,
-    title: "Conveniência",
-    description: "Você não precisa se preocupar com o descarte. Nós fornecemos os recipientes, coletamos e transportamos de forma segura.",
+    title: "Comodidade Total",
+    description: "Deixe conosco a responsabilidade! Fornecemos caçambas de qualidade, realizamos a coleta no dia combinado e transportamos tudo com segurança.",
     color: "from-green-500 to-green-600",
   },
   {
     icon: Leaf,
-    title: "Sustentabilidade",
-    description: "Descarte realizado em conformidade com normas legais e ambientais, preservando o meio ambiente.",
+    title: "Responsabilidade Ambiental",
+    description: "Todos os resíduos são destinados a centros de reciclagem e descarte licenciados, respeitando as leis ambientais e contribuindo para um planeta mais limpo.",
     color: "from-blue-500 to-blue-600",
   },
   {
     icon: Shield,
-    title: "Eficiência e Segurança",
-    description: "Recursos adequados para diferentes tipos de resíduos, evitando danos e garantindo remoção correta.",
+    title: "Qualidade e Segurança",
+    description: "Equipamentos modernos e equipe preparada para qualquer situação. Trabalhamos com segurança em primeiro lugar, protegendo você e sua propriedade.",
     color: "from-orange-500 to-orange-600",
   },
 ];
@@ -60,13 +60,13 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              QUEM NÓS SOMOS
+              SOBRE A MUNDO CAÇAMBAS
             </h2>
             <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-              Na Mundo Caçambas, estamos há <span className="font-bold text-green-500">20 anos</span> oferecendo serviços de locação de caçambas com profissionalismo e qualidade. Atendemos tanto pessoas físicas quanto jurídicas, garantindo um serviço ágil, seguro e com total respeito ao meio ambiente.
+              Com <span className="font-bold text-green-500">20 anos de experiência</span>, a Mundo Caçambas é referência em soluções de coleta e transporte de resíduos na região. Trabalhamos com dedicação para oferecer um serviço confiável, eficiente e responsável com o meio ambiente.
             </p>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Nossa equipe é altamente qualificada para atender às necessidades de cada cliente, proporcionando soluções personalizadas para remoção e descarte de resíduos em obras, reformas e limpezas gerais.
+              Nossos profissionais são treinados para lidar com qualquer tipo de resíduo, desde lixo doméstico até entulho de grandes obras. Cada projeto é tratado com atenção especial, garantindo a satisfação total do cliente e o cumprimento de todas as normas ambientais e legais.
             </p>
           </motion.div>
         </div>
