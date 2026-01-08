@@ -48,12 +48,12 @@ export default function HeroSection() {
         transition={{ duration: 1.2 }}
       >
         <img
-          src="/images/hero-recycling-truck.jpg"
-          alt="Caminhão de reciclagem"
+          src="/images/truck-background.jpg"
+          alt="Caminhão de coleta de resíduos"
           className="w-full h-full object-cover"
         />
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/50" />
       </motion.div>
 
       {/* Content */}
