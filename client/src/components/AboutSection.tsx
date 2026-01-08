@@ -46,8 +46,8 @@ export default function AboutSection() {
             className="rounded-lg overflow-hidden shadow-lg"
           >
             <img
-              src="/images/team-sustainability.jpg"
-              alt="Equipe Mundo Caçambas"
+              src="/images/owner-with-truck.jpg"
+              alt="Proprietário Mundo Caçambas com caminhão"
               className="w-full h-auto"
             />
           </motion.div>

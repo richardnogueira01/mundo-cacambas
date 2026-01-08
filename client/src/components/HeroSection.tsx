@@ -50,7 +50,7 @@ export default function HeroSection() {
         <img
           src="/images/truck-background.jpg"
           alt="Caminhão de coleta de resíduos"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
         />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/50" />
