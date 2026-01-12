@@ -2,10 +2,5 @@
   "framework": "vite",
   "buildCommand": "vite build",
   "outputDirectory": "dist/public",
-  "installCommand": "pnpm install",
-  "env": {
-    "BUILD_COMMAND": {
-      "value": "vite build"
-    }
-  }
+  "installCommand": "pnpm install"
 }
