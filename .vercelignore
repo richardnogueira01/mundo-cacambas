@@ -6,6 +6,4 @@ node_modules/
 ideas.md
 api/
 functions/
-*.ts
-!client/src/**
 
