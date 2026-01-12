@@ -5,3 +5,8 @@ node_modules/
 .env.local
 patches/
 ideas.md
+api/
+functions/
+*.ts
+!client/src/**
+
